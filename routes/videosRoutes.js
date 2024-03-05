@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const cors = require("cors");
 const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
+const random = require("random-name");
 
 //get videos
 router.get("/", (req, res) => {
@@ -21,6 +21,7 @@ router.get("/", (req, res) => {
 
   //send videoDetails (id, title, channel, image)
   if (videoDetails) {
+    res.statusMessage = "Here are the video details! Enjoy ";
     res.status(200).send(videoDetails);
   } else {
     res.statusMessage = "Video not found";
@@ -42,6 +43,7 @@ router.get("/:id", (req, res) => {
     res.statusMessage = "Here are the video details! Enjoy ";
     res.status(200).send(selectedVideo);
   } else {
+    res.statusMessage = "No video here!";
     res.status(404).send("Video not found");
   }
 
@@ -75,7 +77,6 @@ router.post("/:id/comments", (req, res) => {
   const updatedVideoDetail = JSON.stringify(videos);
   fs.writeFileSync("./data/video-details.json", updatedVideoDetail);
 
-  console.log(selectedVideo.comments);
   res.statusMessage = "Comment posted";
   res.send(newComment);
 });
@@ -106,7 +107,42 @@ router.delete("/:videoId/comments/:commentId", (req, res) => {
   }
 });
 
-//post video (upload video)
-// router.post()
+//post request to upload a new video with all details
+router.post("/", (req, res) => {
+  const { title, description } = req.body;
+
+  const videosJSON = fs.readFileSync("./data/video-details.json");
+  const videos = JSON.parse(videosJSON);
+
+  //create a new video
+  const newVideo = {
+    id: uuidv4(),
+    title: title,
+    channel: random.first() + " " + random.last(),
+    image: "http://localhost:8080/images/image1.jpg ",
+    description: description,
+    views: 0,
+    likes: 0,
+    duration: Math.floor(Math.random() * 10) + ":00",
+    video: "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    timestamp: Date.now(),
+    comments: [],
+  };
+
+  //push newVideo to the videos array
+  videos.push(newVideo);
+
+  //update json file
+  const updatedVideoDetail = JSON.stringify(videos);
+  fs.writeFileSync("./data/video-details.json", updatedVideoDetail);
+
+  res.statusMessage = "Video posted. Thanks!";
+  res.status(200).send("Video posted");
+
+  if (!newVideo) {
+    res.statusMessage = "Oh no, try again!";
+    res.status(404).send("Upload failed");
+  }
+});
 
 module.exports = router;
