@@ -292,5 +292,18 @@
         "timestamp": 1701584262000
       }
     ]
+  },
+  {
+    "id": "903a71e6-9d3a-4272-a244-4477ac706af7",
+    "title": "Markus Naslund: A Hockey Legend",
+    "channel": "Lilllie Hayley",
+    "image": "http://localhost:8080/images/markus.jpg",
+    "description": "Step onto the ice with Markus Näslund, a Swedish hockey sensation whose skill and determination made him a legend in the NHL. From his early days in Sweden to his electrifying performances with the Vancouver Canucks, Näslund's journey is one of perseverance, leadership, and unmatched talent. Join us as we delve into his remarkable career, reliving unforgettable goals, thrilling victories, and the lasting impact he left on the game of hockey. Get ready to be inspired by the legacy of Markus Näslund, a true icon of the sport.",
+    "views": 1,
+    "likes": 3,
+    "duration": "4:00",
+    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    "timestamp": 1709717773754,
+    "comments": []
   }
 ]

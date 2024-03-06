@@ -62,8 +62,6 @@ router.get("/:id", (req, res) => {
     res.statusMessage = "No video here!";
     res.status(404).send("Video not found");
   }
-
-  // console.log(selectedVideo);
 });
 
 //post comment
@@ -123,6 +121,7 @@ router.delete("/:videoId/comments/:commentId", (req, res) => {
   }
 });
 
+//TODO: validation for image poster
 //post request to upload a new video with all details
 router.post("/", upload.single("image"), (req, res, next) => {
   const { title, description } = req.body;
@@ -162,6 +161,45 @@ router.post("/", upload.single("image"), (req, res, next) => {
   }
 
   next();
+});
+
+//TODO: PUT ENDPOINT
+
+router.put("/:id", (req, res) => {
+  const { id } = req.params;
+
+  const videosJSON = fs.readFileSync("./data/video-details.json");
+  const videos = JSON.parse(videosJSON);
+
+  //update likes when button is clicked on put request
+  const selectedVideo = videos.find((video) => video.id === id);
+  selectedVideo.likes = selectedVideo.likes + 1;
+
+  //update json file
+  const updatedVideoDetail = JSON.stringify(videos);
+  fs.writeFileSync("./data/video-details.json", updatedVideoDetail);
+
+  res.statusMessage = "Thank you for the feedback!";
+  res.status(200).send("Thank you for the feedback!");
+});
+//TODO:
+//put request for views whenever a selected video is played
+router.put("/:id", (req, res) => {
+  const { id } = req.params;
+
+  const videosJSON = fs.readFileSync("./data/video-details.json");
+  const videos = JSON.parse(videosJSON);
+  //TODO:
+  //update views when a selected video is clicked
+  const selectedVideo = videos.find((video) => video.id === id);
+  selectedVideo.views = selectedVideo.views + 1;
+
+  //update json file
+  const updatedVideoDetail = JSON.stringify(videos);
+  fs.writeFileSync("./data/video-details.json", updatedVideoDetail);
+
+  res.statusMessage = "Thank you for watching!";
+  res.status(200).send("Thank you for watching!");
 });
 
 module.exports = router;
