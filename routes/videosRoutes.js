@@ -3,6 +3,22 @@ const router = express.Router();
 const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
 const random = require("random-name");
+const multer = require("multer");
+const path = require("path");
+
+// Specify the destination path for multer
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, path.join(__dirname, "../public/images/"));
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
+const upload = multer({ storage });
+
+// Serve static files
+router.use(express.static(path.join(__dirname, "../public/")));
 
 //get videos
 router.get("/", (req, res) => {
@@ -108,8 +124,9 @@ router.delete("/:videoId/comments/:commentId", (req, res) => {
 });
 
 //post request to upload a new video with all details
-router.post("/", (req, res) => {
+router.post("/", upload.single("image"), (req, res, next) => {
   const { title, description } = req.body;
+  const image = req.file;
 
   const videosJSON = fs.readFileSync("./data/video-details.json");
   const videos = JSON.parse(videosJSON);
@@ -119,7 +136,7 @@ router.post("/", (req, res) => {
     id: uuidv4(),
     title: title,
     channel: random.first() + " " + random.last(),
-    image: "http://localhost:8080/images/image1.jpg ",
+    image: "http://localhost:8080/images/" + image.originalname,
     description: description,
     views: 0,
     likes: 0,
@@ -143,6 +160,8 @@ router.post("/", (req, res) => {
     res.statusMessage = "Oh no, try again!";
     res.status(404).send("Upload failed");
   }
+
+  next();
 });
 
 module.exports = router;
