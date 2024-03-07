@@ -121,8 +121,6 @@ router.delete("/:videoId/comments/:commentId", (req, res) => {
   }
 });
 
-//TODO: validation for image poster
-//post request to upload a new video with all details
 router.post("/", upload.single("image"), (req, res, next) => {
   const { title, description } = req.body;
   const image = req.file;
@@ -163,8 +161,7 @@ router.post("/", upload.single("image"), (req, res, next) => {
   next();
 });
 
-//TODO: PUT ENDPOINT
-
+//likes put endpoint
 router.put("/:id", (req, res) => {
   const { id } = req.params;
 
@@ -196,8 +193,8 @@ router.put("/:id", (req, res) => {
   res.statusMessage = "Thank you for the feedback!";
   res.status(200).send("Thank you for the feedback!");
 });
-//TODO:
-//put request for views whenever a selected video is played
+
+//update views endpoint
 router.put("/:id/views", (req, res) => {
   const { id } = req.params;
 
