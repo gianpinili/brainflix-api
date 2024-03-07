@@ -173,7 +173,21 @@ router.put("/:id", (req, res) => {
 
   //update likes when button is clicked on put request
   const selectedVideo = videos.find((video) => video.id === id);
-  selectedVideo.likes = selectedVideo.likes + 1;
+  const likesParts = selectedVideo.likes.split(",");
+  let integerPart = parseInt(likesParts[0].replace(/,/g, ""), 10);
+  let decimalPart = parseInt(likesParts[1] || 0, 10);
+
+  // Increment likes count
+  decimalPart++;
+  if (decimalPart >= 1000) {
+    integerPart += Math.floor(decimalPart / 1000);
+    decimalPart %= 1000;
+  }
+  // Reconstruct likes string
+  selectedVideo.likes =
+    integerPart.toLocaleString() +
+    "," +
+    decimalPart.toString().padStart(3, "0");
 
   //update json file
   const updatedVideoDetail = JSON.stringify(videos);
@@ -184,7 +198,7 @@ router.put("/:id", (req, res) => {
 });
 //TODO:
 //put request for views whenever a selected video is played
-router.put("/:id", (req, res) => {
+router.put("/:id/views", (req, res) => {
   const { id } = req.params;
 
   const videosJSON = fs.readFileSync("./data/video-details.json");
@@ -192,7 +206,22 @@ router.put("/:id", (req, res) => {
   //TODO:
   //update views when a selected video is clicked
   const selectedVideo = videos.find((video) => video.id === id);
-  selectedVideo.views = selectedVideo.views + 1;
+
+  const viewsParts = selectedVideo.views.split(",");
+  let integerPart = parseInt(viewsParts[0].replace(/,/g, ""), 10);
+  let decimalPart = parseInt(viewsParts[1] || 0, 10);
+
+  // Increment views count
+  decimalPart++;
+  if (decimalPart >= 1000) {
+    integerPart += Math.floor(decimalPart / 1000);
+    decimalPart %= 1000;
+  }
+  // Reconstruct views string
+  selectedVideo.views =
+    integerPart.toLocaleString() +
+    "," +
+    decimalPart.toString().padStart(3, "0");
 
   //update json file
   const updatedVideoDetail = JSON.stringify(videos);
