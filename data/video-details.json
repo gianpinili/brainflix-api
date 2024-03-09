@@ -3,12 +3,12 @@
     "id": "84e96018-4022-434e-80bf-000ce4cd12b8",
     "title": "The Future of Artificial Intelligence",
     "channel": "Aiden Thompson",
-    "image": "http://localhost:8080/images/image0.jpg",
+    "image": "/image0.jpg",
     "description": "Explore the cutting-edge developments and predictions for Artificial Intelligence in the coming years. From revolutionary breakthroughs in machine learning to the ethical considerations influencing AI advancements, this exploration transcends the boundaries of mere speculation. Join us on a journey that navigates the intricate interplay between innovation, ethics, and the ever-evolving tech frontier.",
-    "views": "980,550",
-    "likes": "22,482",
+    "views": "980,546",
+    "likes": "22,483",
     "duration": "4:01",
-    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    "video": "http://localhost:8080/videos/brainstation_sample_video.mp4",
     "timestamp": 1691471862000,
     "comments": [
       {
@@ -38,12 +38,12 @@
     "id": "c05b9a93-8682-4ab6-aff2-92ebb4bbfc14",
     "title": "Exploring Cities of Europe",
     "channel": "Ryan Hernandez",
-    "image": "http://localhost:8080/images/image1.jpg ",
+    "image": "/image1.jpg ",
     "description": "Embark on a vicarious adventure through the captivating landscapes and vibrant cultures of Europe. This video promises a virtual journey that transcends borders. From the grandeur of historic landmarks to the charm of local gems, viewers will traverse the enchanting cities of Europe with a keen eye for cultural nuances and hidden treasures. Immerse yourself in the magic of faraway places and let me be your guide to the heart of each city.",
-    "views": "810, 297",
+    "views": "810,300",
     "likes": "400,058",
     "duration": "12:26",
-    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    "video": "http://localhost:8080/videos/brainstation_sample_video.mp4",
     "timestamp": 1690089462000,
     "comments": [
       {
@@ -73,12 +73,12 @@
     "id": "25ce5d91-a262-4dcf-bb87-42b87546bcfa",
     "title": "Molecular Gastronomy: Secrets Unveiled",
     "channel": "Cornelia Currey",
-    "image": "http://localhost:8080/images/image2.jpg",
+    "image": "/image2.jpg",
     "description": "Join Cornelia on a delectable journey as we unravel the culinary secrets of renowned chefs and hidden gems around the world. From exotic street food to Michelin-starred masterpieces, this video is a feast for the senses. Delve into the world of gastronomy and elevate your appreciation for the art of cooking. Get ready for a mouthwatering adventure that will leave you inspired to explore new flavors and cuisines.",
     "views": "1,262",
     "likes": "729,753",
     "duration": "26:13",
-    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    "video": "http://localhost:8080/videos/brainstation_sample_video.mp4",
     "timestamp": 1700374662000,
     "comments": [
       {
@@ -108,12 +108,12 @@
     "id": "b6f35f03-7936-409b-bd2a-446bcc5f30e7",
     "title": "Embracing Serenity in Everyday Moments",
     "channel": "Dalia Bennu",
-    "image": "http://localhost:8080/images/image3.jpg",
+    "image": "/image3.jpg",
     "description": "Embark on a transformative journey towards mindfulness and inner peace. From sunrise meditations to mindful eating practices, this video guides you through simple yet profound ways to infuse serenity into your daily life. Discover the power of living in the present moment and cultivate a sense of calm amidst life's hustle.",
     "views": "739,945",
     "likes": "198,352",
     "duration": "8:34",
-    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    "video": "http://localhost:8080/videos/brainstation_sample_video.mp4",
     "timestamp": 1676182662000,
     "comments": [
       {
@@ -143,12 +143,12 @@
     "id": "1b964601-a6dd-4fcc-b5f3-1000338c9557",
     "title": "Beyond the Horizon",
     "channel": "Emmett Wilson",
-    "image": "http://localhost:8080/images/image4.jpg",
+    "image": "/image4.jpg",
     "description": "Through rare footage, interviews, and historical accounts, this video paints a vivid picture of the indomitable human spirit, pushing the boundaries of endurance and scientific discovery in one of the most remote places on the planet. Brace yourself for an awe-inspiring journey into the heart of Antarctica, where exploration meets the untamed beauty of the frozen frontier",
     "views": "72,342",
     "likes": "8,785",
     "duration": "45:59",
-    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    "video": "http://localhost:8080/videos/brainstation_sample_video.mp4",
     "timestamp": 1677910662000,
     "comments": [
       {
@@ -171,12 +171,12 @@
     "id": "9c268c0a-83dc-4b96-856a-bb5ded2772b1",
     "title": "Wild Rhythms: Harmony of African Fauna",
     "channel": "Priscilla Romani",
-    "image": "http://localhost:8080/images/image5.jpg",
+    "image": "/image5.jpg",
     "description": "From the regal lions to the graceful giraffes - from the stealthy leopards to the colossal elephants, every frame captures the untold stories of survival, migration, and the delicate interconnectedness of this unparalleled ecosystem.",
     "views": "1,385,387",
     "likes": "576,588",
     "duration": "47:26",
-    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    "video": "http://localhost:8080/videos/brainstation_sample_video.mp4",
     "timestamp": 1680067062000,
     "comments": [
       {
@@ -206,12 +206,12 @@
     "id": "fc5261d1-58a0-47e4-9c19-2b7a1715fa1b",
     "title": "Discovering the Night Sky",
     "channel": "Sabine Faucher",
-    "image": "http://localhost:8080/images/image6.jpg",
+    "image": "/image6.jpg",
     "description": "Embark on a cosmic journey as we navigate the night sky, identifying constellations, planets, and celestial wonders. Whether you're a seasoned stargazer or a novice, this cosmic adventure promises to deepen your appreciation for the vastness above and inspire a newfound curiosity for the stars",
     "views": "252,796",
     "likes": "4,905",
     "duration": "7:31",
-    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    "video": "http://localhost:8080/videos/brainstation_sample_video.mp4",
     "timestamp": 1692767862000,
     "comments": [
       {
@@ -241,12 +241,12 @@
     "id": "99478bed-6428-49ed-8eaa-f245a5414336",
     "title": "Art Unveiled",
     "channel": "Theodore Bernard",
-    "image": "http://localhost:8080/images/image7.jpg",
+    "image": "/image7.jpg",
     "description": "Famous Paintings and Their Stories. This illuminating video goes beyond the canvas, exploring the profound narratives and hidden meanings behind renowned masterpieces. From the strokes of iconic painters to the emotions embedded in each artwork, viewers are invited to embark on a visual and intellectual journey through the realms of art history.",
     "views": "129,984",
     "likes": "62,552",
     "duration": "26:52",
-    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    "video": "http://localhost:8080/videos/brainstation_sample_video.mp4",
     "timestamp": 1698211062000,
     "comments": [
       {
@@ -269,12 +269,12 @@
     "id": "76ca28c0-7dea-4553-887f-8e5129a80fc3",
     "title": "A Journey Through Time and Technology",
     "channel": "Farah Mikhail",
-    "image": "http://localhost:8080/images/image8.jpg",
+    "image": "/image8.jpg",
     "description": "From the historic steam locomotives that pioneered rail travel to the cutting-edge high-speed trains shaping the modern era, this video uncovers the rich tapestry of train technology. With in-depth insights, rare footage, and expert interviews, we delve into the engineering marvels, cultural impact, and the romantic allure of trains across different eras. Join us for an immersive exploration of the rails, where the past, present, and future converge in a captivating symphony of locomotion.",
     "views": "3,093",
     "likes": "75,985",
     "duration": "49:20",
-    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+    "video": "http://localhost:8080/videos/brainstation_sample_video.mp4",
     "timestamp": 1701497862000,
     "comments": [
       {
@@ -290,34 +290,6 @@
         "comment": "Your documentary on the history and technology of trains is a delightful treat for railway enthusiasts like me. The attention to detail and the chronological journey through time make it an educational and entertaining experience.",
         "likes": 0,
         "timestamp": 1701584262000
-      }
-    ]
-  },
-  {
-    "id": "903a71e6-9d3a-4272-a244-4477ac706af7",
-    "title": "Markus Naslund: A Hockey Legend",
-    "channel": "Lilllie Hayley",
-    "image": "http://localhost:8080/images/markus.jpg",
-    "description": "Step onto the ice with Markus Näslund, a Swedish hockey sensation whose skill and determination made him a legend in the NHL. From his early days in Sweden to his electrifying performances with the Vancouver Canucks, Näslund's journey is one of perseverance, leadership, and unmatched talent. Join us as we delve into his remarkable career, reliving unforgettable goals, thrilling victories, and the lasting impact he left on the game of hockey. Get ready to be inspired by the legacy of Markus Näslund, a true icon of the sport.",
-    "views": "4,981",
-    "likes": "3,687",
-    "duration": "4:00",
-    "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
-    "timestamp": 1709717773754,
-    "comments": [
-      {
-        "id": "6def0eff-7033-4c91-9d23-198939e445a6",
-        "name": "Elias Pettersson",
-        "comment": "Watching Markus Naslund highlights always leaves me in awe. He's not just a legend in Swedish hockey, but a true inspiration for players like me. His skill, determination, and leadership on the ice are something every young player dreams of emulating. Proud to follow in his footsteps as a fellow Canucks player. #Respect #NaslundLegacy",
-        "likes": 0,
-        "timestamp": 1709775451919
-      },
-      {
-        "id": "a725dedc-0d61-47f9-976e-b9d11a1f55fc",
-        "name": "Quinn Hughes",
-        "comment": "Markus Naslund is a Canucks icon and a true legend of the game. His skill and leadership paved the way for players like me to chase our dreams in Vancouver. As a young defenseman, I've always admired his dedication to the team and his ability to elevate the play of those around him. It's an honor to be part of the same organization that he once led with such grace and passion. #NaslundLegacy #CanucksPride",
-        "likes": 0,
-        "timestamp": 1709775497888
       }
     ]
   }

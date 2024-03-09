@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// Serve static files
+// Serve static files (with multer middleware)
 router.use(express.static(path.join(__dirname, "../public/")));
 
 //get videos
