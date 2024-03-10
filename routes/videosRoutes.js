@@ -92,7 +92,7 @@ router.post("/:id/comments", (req, res) => {
   fs.writeFileSync("./data/video-details.json", updatedVideoDetail);
 
   res.statusMessage = "Comment posted";
-  res.send(newComment);
+  res.status(201).send(newComment);
 });
 
 //delete comment
@@ -115,7 +115,7 @@ router.delete("/:videoId/comments/:commentId", (req, res) => {
   fs.writeFileSync("./data/video-details.json", updatedVideoDetail);
 
   if (selectedVideo) {
-    res.status(200).send("Comment deleted");
+    res.status(201).send("Comment deleted");
   } else {
     res.status(404).send("Comment not found");
   }
@@ -200,7 +200,7 @@ router.put("/:id/views", (req, res) => {
 
   const videosJSON = fs.readFileSync("./data/video-details.json");
   const videos = JSON.parse(videosJSON);
-  //TODO:
+
   //update views when a selected video is clicked
   const selectedVideo = videos.find((video) => video.id === id);
 
